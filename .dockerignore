@@ -1,0 +1,8 @@
+**/node_modules
+**/dist
+**/target
+**/out-tsc
+.git
+.opencode
+.env
+*.log

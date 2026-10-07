@@ -1,0 +1,12 @@
+# Frontend — build de Angular servida con nginx
+FROM node:22-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm ci || npm install
+COPY . .
+RUN npm run build -- --configuration production
+
+FROM nginx:1.27-alpine
+COPY --from=build /app/dist/adventure-frontend/browser /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80

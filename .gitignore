@@ -1,0 +1,66 @@
+# ─────────────────────────────────────────────────────────────
+# Adventure Retail — Sistema de Gestión Comercial
+# Control de versiones GitFlow (main → develop → feature/*)
+# ─────────────────────────────────────────────────────────────
+
+# ── Documentación interna (NO versionada) ─────────────────────
+# Skills de diseño y agentes de desarrollo
+.opencode/
+AGENTS.md
+CLAUDE.md
+*.agent.md
+
+# Documentos de diseño (SDD) y artefactos de gestión
+SDD*.md
+**/sdd/
+docs/sdd/
+*.sdd
+
+# ── Credenciales y secretos ───────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.p12
+
+# ── Node.js / Angular (frontend) ──────────────────────────────
+node_modules/
+dist/
+.tmp/
+.angular/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Java / Maven (backend) ────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+.idea/
+*.iml
+
+# ── IDEs y sistema operativo ──────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+
+# ── Bases de datos locales ────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Logs y reportes generados ─────────────────────────────────
+logs/
+*.log
+coverage/
